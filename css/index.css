@@ -1,0 +1,4556 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(../temp/FontsFree-Net-Abolition-W00-Regular.ttf);
+}
+@font-face {
+  font-family: myfont2;
+  src: url(../fonts/GalanoGrotesqueAltExtraLight.otf);
+}
+@font-face {
+  font-family: myfont2light;
+  src: url(../fonts/GalanoGrotesqueAltThin.otf);
+}
+@font-face {
+  font-family: regular;
+  src: url(../fonts/GalanoGrotesqueAltRegular.otf);
+}
+* {
+  /*font-family: myFirstFont;*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background-color: black;
+}
+#main {
+  position: relative;
+  width: 100%;
+  /* height: 350vh; */
+  height: auto;
+  background-color: black;
+}
+.Navbar {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: all 0.5s;
+  background-color: black;
+  z-index: 105;
+}
+.Navbar1 {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: all 0.5s;
+  background: rgba(0, 0, 0, 0.763);
+  z-index: 104;
+  width: 100%;
+}
+#logo1 {
+  width: 200px;
+  height: 50px;
+  /* background-color: antiquewhite;*/
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  word-spacing: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#logo {
+  width: 200px;
+  height: 50px;
+  /* background-color: antiquewhite;*/
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  word-spacing: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#logo > h5 {
+  padding-top: 5px;
+  /* font-family: Abolition; */
+  color: #ff4600;
+  font-family: myFirstFont;
+}
+ul {
+  color: white;
+  text-decoration: none;
+  width: auto;
+}
+ul li {
+  display: inline-block;
+  padding: 7px;
+}
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 10px;
+}
+ul li a:hover {
+  color: white;
+}
+#secondNav {
+  width: 100%;
+  padding: 10px 0;
+  background-color: pink;
+}
+ul li Button {
+  width: 160px;
+  height: 35px;
+  border-radius: 5px;
+  font-family: myFirstFont;
+}
+.menuIcon {
+  color: white;
+  font-size: 35px;
+  display: none;
+  text-align: right;
+}
+
+#soundWave {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+  background-color: black;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.368), rgba(0, 0, 0, 0.308)),
+    url("../images/wave.png");
+  background-size: cover;
+  position: relative;
+}
+#overlayer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: linear-gradient(rgba(0, 0, 0, 0.368), rgba(0, 0, 0, 0.308));
+}
+/*#picscontent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 40%;
+    background-color: yellow;
+    bottom: 7%;
+    left: 30%;
+}*/
+#bottomContent {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-color: black;
+  color: white;
+}
+/*#bottomContent>h1{
+    text-align: center;
+}
+
+#buttonCollection{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 40%;
+    padding: 15px 0px;
+    text-align: center;
+}
+.button1{
+    width: 160px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-family:  myFirstFont;
+    border: 2px solid white;
+}
+#colour{  
+    background-color: #FF4600;
+    background-image: linear-gradient(to bottom right,#FF4600,#FF9100);
+}
+#colour1{
+    color: white;
+    background-color: black;
+}
+
+}*/
+.buttoncolour {
+  background-color: #ff9100;
+  background-image: linear-gradient(302deg, #ff9100 0%, #ff4600 100%);
+  color: white;
+}
+
+.minor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 45%;
+  color: #9d9d9d;
+  /* background-color: #136a16; */
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.minor > h6 {
+  font-family: myfont2;
+  letter-spacing: 0.48px;
+}
+#text {
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-family: myfont2;
+  letter-spacing: 2.4px;
+  bottom: 15%;
+    /* background-color: red ; */
+}
+#text>p{
+   padding-top: 10px;
+   font-family: myFont2;
+}
+/*
+ In between setting the font size for 1 page reponsive
+*/
+/*THIS SECTION IS FOR BACKGROUND MUSIC */
+  #audioPlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+   width: 100%;
+   height:15%;
+    /* background-color: white;  */
+   bottom: 0%;
+ }
+ #audioPlay .play_icon{
+    font-size: 55px;
+    color: #FF4600;
+ }
+ #pause_icon{
+  display: initial;
+ }
+/*--------------------------------------------------------------*/
+.bottomContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 35px;
+  width: 100%;
+  height: 45vh;
+  background-color: black;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  height: 15%;
+  /* background-color: red; */
+  color: white;
+  font-family: myfont2;
+}
+.bottombox {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 75%;
+  height: 25vh;
+  background-image: radial-gradient(#6a3113, #3a2417, #1e1c1a, #1a1a1a);
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.bottombox > h2 {
+  font-family: regular;
+  color: white;
+  letter-spacing: 1.6px;
+}
+.buttoncollection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  /* background-color: red; */
+  padding: 10px;
+  /* background-color: red; */
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.button1 {
+  width: 210px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-family: myFirstFont;
+  border: 2px solid white;
+}
+
+.buttoncollection .button1 > span {
+  font-family: myFirstFont;
+  font-size: 17px;
+}
+#colour1 {
+  background-color: #ff9100;
+  background-image: linear-gradient(302deg, #ff9100 0%, #ff4600 100%);
+  border: none;
+  color: white;
+}
+#colour2 {
+  background-color: transparent;
+  color: white;
+  letter-spacing: 0.48px;
+  transition: all 0.5s;
+}
+.image_off{
+  display: none;
+}
+.image_off1{
+  display: none;
+}
+/* #buttoncollection1:hover .hoverButton1 {
+   background-color: white;
+   color: black;
+} */
+/* #buttoncollection1:hover #colour2>.image_on{
+   display: none;
+ 
+} */
+/* #buttoncollection1:hover #colour2>.image_off{
+   display: initial;
+} */
+/* #buttoncollection1:hover .hoverButton2 {
+  background-color: white;
+  color: black;
+} */
+/* #buttoncollection1:hover #colour2>.image_off1{
+  display: initial;
+} */
+#colour2:hover{
+  background-color: white;
+  color: black;
+}
+#colour2:hover>.image_on{
+    display: none;
+}
+#colour2:hover>.image_off{
+  display: initial;
+}
+#colour2:hover>.image_off1{
+  display: initial;
+}
+
+
+.reviewContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+  /* background-color: black; */
+}
+#contentDiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 45%;
+  height: 31vh;
+}
+.reviewBox1 {
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+  width: 33%;
+  height: 100%;
+  background-image: radial-gradient(#6a3113, #3a2417, #1e1c1a, #1a1a1a);
+  color: white;
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+.reviewbutton {
+  width: 150px;
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 8px;
+  /* font-family: myFirstFont;   */
+  border: none;
+  color: black;
+}
+
+.reviewBox1 > p {
+  /* font-family: myfont2; */
+  font-family: myfont2light;
+  font-size: 12px;
+}
+#para {
+  text-align: center;
+}
+
+#reviewbox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.textcontent {
+  height: 0;
+  position: relative;
+  overflow: hidden;
+  font-size: 12px;
+}
+.textcontent > p {
+  opacity: 0;
+  font-size: 0;
+  transition: all 0.5s;
+  font-family: myfont2light;
+}
+#reviewbox > .reviewbutton {
+  height: 0;
+  transition: all 0.5s;
+}
+.reviewbutton > span {
+  opacity: 0;
+  transition: all 0.5s;
+}
+.reviewBox1:hover #reviewbox > .reviewbutton {
+  height: 40px;
+  /* color: white; */
+}
+
+.reviewBox1:hover .reviewbutton > span {
+  opacity: 1;
+  font-family: myFirstFont;
+  color: black;
+}
+.reviewBox1:hover .textcontent {
+  height: 30%;
+  color: white;
+}
+.reviewBox1:hover .textcontent > p {
+  opacity: 1;
+  font-size: 12px;
+}
+.icon {
+  font-size: 18px;
+  color: #ff9100;
+  transition: all 0.5s;
+}
+.reviewBox1:hover .icon {
+  color: green;
+}
+#reviewbox > h6 {
+  font-size: 10px;
+}
+#reviewbox > h4 {
+  font-size: 28px;
+  font-family: myFirstFont;
+  color: white;
+}
+#reviewbox:hover h4 {
+  font-size: 22px;
+  transition: all 0.5s;
+}
+#whyUs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+  background-color: black;
+}
+.content {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  color: #989898;
+  font-family: myFont2;
+}
+#features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+  height: 35vh;
+  margin-bottom: 5px;
+  /* background-color: blue; */
+}
+.feature_section {
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  height: 100%;
+  /* background-color: red; */
+}
+.feature_section1 {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  /* background-color: green; */
+}
+
+.featureBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48%;
+  height: 100%;
+  background-color: #d56b00;
+  background-image: linear-gradient(
+    65deg,
+    #d56b00 0%,
+    #6f4002 22%,
+    #2f2504 49%,
+    #151a05 75%,
+    #0c1605 100%
+  );
+  color: white;
+}
+.featureBox > h6 {
+  font-size: 10px;
+  font-family: myfont2;
+}
+.featureBox > h5 {
+  font-family: myFirstFont;
+}
+.featureBox > h5 {
+  font-size: 25px;
+}
+#headphone {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+}
+#headphone > img {
+  width: 100%;
+}
+ /* .featureBox:hover {
+  background-color: #d56b00;
+  background-image: linear-gradient(
+    13deg,
+    #d56b00 0%,
+    #a9650a 46%,
+    #2f2504 100%
+  );
+} */
+ /* .featureBox:hover #headphone > img {
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: all 2s;
+} */
+#tools {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+}
+#tools > img {
+  width: 100%;
+}
+/* .featureBox:hover #tools > img {
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: all 2s;
+} */
+#wifi {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+}
+#wifi > img {
+  width: 100%;
+}
+ /* .featureBox:hover #wifi > img {
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: all 2s;
+} */
+#notify {
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+}
+#notify > img {
+  width: 100%;
+}
+ /* .featureBox:hover #notify > img {
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: all 2s;
+}  */
+.formContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  background-color: black;
+}
+.form-box {
+  width: 80%;
+  height: 68vh;
+  /* background-color: red; */
+}
+#reviewformBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 25vh;
+  background-color: #6a3113;
+  background-image: linear-gradient(
+    315deg,
+    #6a3113 0%,
+    #3a2417 30%,
+    #1e1c1a 66%,
+    #1a1a1a 100%
+  );
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 5px;
+}
+#reviewformBox > h2 {
+  color: white;
+  font-family: myfont2light;
+}
+#reviewform {
+  display: flex;
+  width: 100%;
+  height: 40vh;
+  background-color: black;
+}
+#supportCouse {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 40vh;
+  background-color: #1a1a1a;
+  background-image: linear-gradient(
+    165deg,
+    #1a1a1a 0%,
+    #1e1c1a 30%,
+    #2c3a17 66%,
+    #136a16 100%
+  );
+  padding-top: 35px;
+  padding-bottom: 35px;
+  margin-right: 2px;
+}
+#supportCouse > h3,
+p {
+  font-family: myfont2;
+  color: white;
+}
+#supportCouse > p {
+  text-align: center;
+  font-family: myfont2;
+  font-size: 12px;
+}
+.bottomButton {
+  width: 80%;
+  /* text-align: center; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.button2 {
+  width: 120px;
+  height: 50px;
+  background-color: white;
+  border-radius: 8px;
+  font-family: myFirstFont;
+  border: none;
+}
+.colouredbutton {
+  width: 120px;
+  height: 50px;
+  background-color: white;
+  border-radius: 8px;
+  font-family: myFirstFont;
+  border: none;
+}
+.button3 {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  border-radius: 8px;
+  font-family: myFirstFont;
+  padding: 5px;
+  border: none;
+}
+#donate:hover{
+  background-color: #ff9100;
+  background-image: linear-gradient(302deg, #ff9100 0%, #ff4600 100%);
+  color: white;
+}
+#donate1:hover{
+  background-color: #ff9100;
+  background-image: linear-gradient(302deg, #ff9100 0%, #ff4600 100%);
+  color: white;
+}
+
+#bottom-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 40vh;
+  background-color: #13586a;
+  background-image: linear-gradient(
+    315deg,
+    #13586a 0%,
+    #173a30 33%,
+    #1e1c1a 66%,
+    #1a1a1a 100%
+  );
+  margin-left: 2px;
+}
+#bottom-form > h3 {
+  font-family: myfont2;
+  color: white;
+}
+.input-forms {
+  width: 100%;
+  background-color: pink;
+}
+.name {
+  width: 60%;
+  height: 40px;
+  background-color: #3e3c3a;
+  border-radius: 8px;
+  padding-left: 20px;
+  font-family: regular;
+  border: none;
+}
+.email {
+  width: 85%;
+  height: 40px;
+  background-color: #3e3c3a;
+  border-radius: 8px;
+  border: none;
+  padding-left: 20px;
+}
+#remainform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  padding-top: 12px;
+}
+.button4 {
+  width: 40px;
+  height: 40px;
+  background-color: #ff9100;
+  background-image: linear-gradient(302deg, #ff9100 0%, #ff4600 100%);
+  color: white;
+  border-radius: 8px;
+  font-size: 24px;
+  border: none;
+}
+#bottom-form > h3 {
+  margin-bottom: 20px;
+}
+.lastPart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background-color: black;
+  /* background-color: blue;  */
+}
+#iconpart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+}
+#iconpart > h6 {
+  font-size: 10px;
+  color: white;
+  padding-top: 6px;
+  font-family: myfont2;
+  padding-left: 10px;
+}
+#textpart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+  height: 100%;
+}
+#textpart > h6 {
+  font-size: 10px;
+  color: white;
+  font-family: myfont2;
+}
+#socialmedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+}
+.handles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  font-size: 20px;
+}
+.handles .fa {
+  padding-top: 5px;
+}
+.handles img {
+}
+
+.Testimonials {
+  width: 100%;
+  /* padding: 50px 0; */
+  padding-top: 50px;
+  text-align: center;
+  font-family: myfont2;
+  color: white;
+  /* background-color: black; */
+}
+#user_review {
+  width: 100%;
+  height: 80vh;
+  /* background-color: #0c1605; */
+  padding: 20px;
+  /* background-color: black; */
+}
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /* background-color: black; */
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 30vw;
+  opacity: 0.4;
+  background-color: black;
+}
+.swiper-slide-active {
+  opacity: 1;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+.testimonlasBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.quote {
+  width: 100px;
+  height: 100px;
+  opacity: 0.2;
+}
+.content {
+  text-align: center;
+}
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+.swiper-button-next {
+  color: white;
+}
+.swiper-button-prev {
+  color: white;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+  color: white;
+  background: white;
+  margin: 1vw;
+}
+.inner_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 25vw;
+  width: 19vw;
+  background-color: #dadada;
+  /* transform: rotate(20deg);  */
+  transition: all 0.5s;
+  background-color: #6a3113;
+  background-image: linear-gradient(
+    359deg,
+    #6a3113 0%,
+    #3a2417 30%,
+    #1e1c1a 66%,
+    #1a1a1a 100%
+  );
+  padding-top: 30px;
+}
+.swiper-slide-next .inner_box {
+  transform: rotate(-15deg);
+}
+.swiper-slide-active .inner_box {
+  transform: rotate(0deg);
+}
+.swiper-slide-prev .inner_box {
+  transform: rotate(15deg);
+}
+#starRating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  padding-left: 10px;
+}
+.star {
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/colourStar.png);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.no-star {
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/blankStar.png);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.user_comment {
+  padding-top: 20px;
+  width: 90%;
+  height: 80%;
+}
+.content_box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  height: 60%;
+  font-family: myfont2light;
+  color: white;
+}
+.user_name {
+  width: 80%;
+  height: 17%;
+  padding-left: 20px;
+}
+.user_name > h4 {
+  font-family: myFirstFont;
+  color: white;
+  text-align: left;
+  letter-spacing: 0.96px;
+  font-size: 16px;
+}
+.user_name > h6 {
+  font-family: myfont2light;
+  color: white;
+  font-size: 12px;
+}
+/*
+MOBILE UI SWIPER AT THE ROUND IN SHAPE WITH THE INFITE SCROLLING
+*/
+.slider {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.circular-slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  background-color: black;
+}
+.circular-slider .wrapper {
+  height: 715px !important;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 20px 0px 20px;
+}
+.circular-slider .wrapper .controls__left,
+.circular-slider .wrapper .controls__right,
+.circular-slider .wrapper .controls__autoplay {
+  position: absolute;
+  z-index: 101;
+  -webkit-transition: 0.6s all;
+  -o-transition: 0.6s all;
+  transition: 0.6s all;
+}
+.circular-slider .wrapper .controls__left:hover .icon-wrapper,
+.circular-slider .wrapper .controls__right:hover .icon-wrapper,
+.circular-slider .wrapper .controls__autoplay:hover .icon-wrapper {
+  font-size: 1.7em;
+  opacity: 1;
+}
+.circular-slider .wrapper .controls__left .icon-wrapper,
+.circular-slider .wrapper .controls__right .icon-wrapper,
+.circular-slider .wrapper .controls__autoplay .icon-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #8eb8e5;
+  font-size: 1.5em;
+  opacity: 0.7;
+}
+.circular-slider .wrapper .controls__left,
+.circular-slider .wrapper .controls__right {
+  /* top: 50%;  */
+  bottom: 0;
+}
+.circular-slider .wrapper .controls__left {
+  left: 45%;
+  color: white;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.circular-slider .wrapper .controls__left:hover {
+  left: 45%;
+  color: white;
+}
+.circular-slider .wrapper .controls__right {
+  right: 45%;
+  -webkit-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+}
+.circular-slider .wrapper .controls__autoplay {
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+.circular-slider .wrapper .controls__autoplay_running .pause {
+  display: block;
+}
+.circular-slider .wrapper .controls__autoplay_running .run {
+  display: none;
+}
+.circular-slider .wrapper .controls__autoplay_paused .pause {
+  display: none;
+}
+.circular-slider .wrapper .controls__autoplay_paused .run {
+  display: block;
+}
+.circular-slider .wrapper .slides-holder {
+  border-radius: 50%;
+  /* border: 2px solid #8EB8E5; */
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  /* z-index: 100; */
+}
+.circular-slider .wrapper .slides-holder__item {
+  /* border-radius: 50%; */
+  width: 19vw !important;
+  height: 40vw !important;
+  /* border: 2px solid #7C99B4;  */
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  /* background-color: #222; */
+  -webkit-transition: 0.3s linear all;
+  -o-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+  -webkit-filter: brightness(70%);
+  filter: brightness(70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.3;
+  cursor: grab;
+}
+.circular-slider .wrapper .slides-holder__item img {
+  width: 70%;
+  height: 65%;
+  /* border-radius: 50%; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.circular-slider .wrapper .slides-holder__item_active {
+  -webkit-filter: brightness(100%);
+  filter: brightness(100%);
+  width: 19vw !important;
+  height: 40vw !important;
+  opacity: 1;
+}
+.circular-slider .wrapper .descriptions {
+  position: absolute;
+  bottom: 0%;
+  z-index: 0;
+}
+.circular-slider .wrapper .descriptions__item {
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: opacity 0s 0s linear;
+  -o-transition: opacity 0s 0s linear;
+  transition: opacity 0s 0s linear;
+}
+.circular-slider .wrapper .descriptions__item_visible {
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 0.6s 0s linear;
+  -o-transition: opacity 0.6s 0s linear;
+  transition: opacity 0.6s 0s linear;
+}
+.circular-slider .wrapper .descriptions__item h5,
+.circular-slider .wrapper .descriptions__item .description {
+  font-family: myFirstFont;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+span {
+  font-size: 13px;
+  font-family: myfont2;
+}
+.circular-slider .wrapper .descriptions__item h5 {
+  font-size: 200%;
+  padding-top: 20px;
+}
+.circular-slider .wrapper .descriptions__item .description {
+  font-size: 100%;
+  margin-top: 10px;
+  padding: 0% 10%;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow-y: hidden;
+  font-family: myfont2;
+}
+.slides-holder__item {
+  width: 30%;
+  height: auto;
+}
+
+.MobileSlider {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-color: black;
+  overflow: hidden;
+  display: none;
+}
+.inner_box1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 23vw;
+  width: 12vw;
+  /* transform: rotate(20deg);  */
+  transition: all 0.5s;
+  padding-top: 30px;
+}
+.descirption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15vh;
+  /* background-color: red; */
+  margin-top: 30px;
+}
+.descirption > h6 {
+  font-size: 10px;
+  color: white;
+  font-family: myfont2light;
+}
+.descirption > p {
+  font-size: 9px;
+  text-align: center;
+  letter-spacing: 0.64px;
+  font-family: myfont2;
+}
+.descirption > h4 {
+  font-size: 18px;
+  color: white;
+  font-family: myFirstFont;
+}
+.testimonlasBox1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#review_formbutton_collection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#heading2 {
+  color: #989898;
+  font-family: myFont2;
+  margin-top: 20px;
+}
+
+/*DESKTOP VERSION START WITH MORE THAN 1024PX */
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1048px) {
+  #soundWave {
+    height: 73vh;
+  }
+  .minor {
+    width: 66%;
+  }
+  .buttoncollection {
+    width: 88%;
+  }
+  #mobilebuttoncollection {
+    width: 100%;
+  }
+  .button1 {
+    width: 197px;
+  }
+  #contentDiv {
+    width: 60%;
+  }
+  #features {
+    width: 63%;
+  }
+  .inner_box {
+    height: 28vw;
+    width: 23vw;
+  }
+  .user_name {
+    padding-left: 10px;
+  }
+  .circular-slider .wrapper {
+    height: 532px !important;
+  }
+  .form-box {
+    width: 92%;
+  }
+  .bottomButton {
+    width: 98%;
+  }
+  #user_review {
+    height: 63vh;
+  }
+  .user_comment > h6 {
+    font-size: 14px;
+  }
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1024px) {
+  #soundWave {
+    height: 70vh;
+  }
+  .minor {
+    width: 66%;
+  }
+  .buttoncollection {
+    width: 88%;
+  }
+  #mobilebuttoncollection {
+    width: 100%;
+  }
+  .button1 {
+    width: 197px;
+  }
+  #contentDiv {
+    width: 60%;
+  }
+  #features {
+    width: 63%;
+  }
+  .inner_box {
+    height: 28vw;
+    width: 23vw;
+  }
+  .user_name {
+    padding-left: 10px;
+  }
+  .circular-slider .wrapper {
+    height: 532px !important;
+  }
+  .form-box {
+    width: 92%;
+  }
+  .bottomButton {
+    width: 98%;
+  }
+  #user_review {
+    height: 63vh;
+  }
+  .user_comment > h6 {
+    font-size: 14px;
+  }
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*BIG SCREENS MEDIA QUERY ABOVE 600PX*/
+@media (max-width: 1000px) {
+  .Navbar {
+    display: none;
+  }
+
+  .menuIcon {
+    display: initial;
+    padding-right: 15px;
+  }
+  .user_name {
+    padding-left: 7px;
+  }
+  #menu ul li a {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+  }
+  #menu {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    /* background-color:rgba(0, 0, 0, 0.868); */
+    /* background-color: red; */
+    background-color: #1a1a1a;
+    background-image: linear-gradient(
+      165deg,
+      #1a1a1a 0%,
+      #1e1c1a 30%,
+      #2c3a17 66%,
+      #136a16 100%
+    );
+    top: 0;
+    right: -200px;
+    z-index: 105;
+    transition: 1s;
+    text-align: left;
+  }
+  #menu .fa {
+    display: block;
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  #menu .closeicon {
+    text-align: left;
+    padding-left: 25px;
+  }
+  .buttoncolour {
+    display: none;
+  }
+  /*MENU SECTION END HERE*/
+
+  /* .txt_cont{
+                position: absolute;
+                background-color: red;
+            }
+
+            .txt_cont #text h1{
+                font-size: 17px;
+            } */
+  #soundWave {
+    width: 100%;
+    height: 55vh;
+  }
+  .minor > h6 {
+    display: none;
+  }
+  #text > h1 {
+    font-size: 30px;
+  }
+  #text>p{
+    font-size: 13px;
+  }
+  #text {
+    bottom: 15%;
+  }
+  .bottombox > h2 {
+    font-size: 17px;
+    padding-top: 20px;
+  }
+  /* .buttoncollection{ 
+                display:block;
+                width: 80%;
+                
+            } */
+
+  #mobilebuttoncollection {
+    width: 60%;
+    display: block;
+    justify-content: space-between;
+  }
+  /* .buttoncollection .button1{
+                width: 210px;
+                height: 40px;
+                font-size: 17px;
+                
+            } */
+  .heading {
+    font-size: 24px;
+  }
+  .button1 > span {
+    font-size: 14px;
+    font-family: myFirstFont;
+  }
+  .bottomContent {
+    /* height: 20vh; */
+  }
+
+  /*SECOND SECTION END HERE */
+  #mobile > .slider {
+    display: none;
+  }
+  .MobileSlider {
+    display: initial;
+  }
+  .inner_box1 {
+    /* height: 113vh; */
+    height: fit-content;
+    width: 39vw;
+  }
+
+  .descirption {
+    /* font-family: myFirstFont; */
+    margin-top: 0px;
+  }
+  .descirption > h6 {
+    font-size: 10px;
+  }
+  #contentDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .reviewContent {
+    height: 64vh;
+  }
+  .reviewBox1 {
+    width: 55%;
+    height: 100%;
+    margin-bottom: 3px;
+  }
+  .buttoncollection .button1 {
+    width: 100%;
+    height: 40px;
+  }
+  /* .heading{
+            padding-top: 2px;
+            
+           } */
+  /* .heading>h2{
+            font-size: 30px;
+           } */
+  .reviewBox1 > h4 {
+    font-size: 10px;
+  }
+  .reviewbutton {
+    display: none;
+  }
+  /*formContent second last part reposive at max-width 600px */
+  .formContent {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    height: 148vh;
+  }
+  .form-box {
+    width: 74%;
+    height: 120vh;
+  }
+  #reviewform {
+    display: block;
+  }
+  /* #reviewformBox {
+            height: 38vh;
+           } */
+  #supportCouse {
+    width: 100%;
+  }
+  #bottom-form {
+    width: 100%;
+  }
+  .swiper-slide-prev .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper-slide-next .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper {
+    padding-top: 8px;
+  }
+  #user_review {
+    height: 53vh;
+  }
+  .inner_box {
+    height: 42vw;
+    width: 27vw;
+  }
+  .user_comment > h6 {
+    font-size: 16px;
+  }
+  .star {
+    width: 18px;
+    height: 18px;
+  }
+  .no-star {
+    width: 18px;
+    height: 18px;
+  }
+  .user_name > h4 {
+    font-size: 18px;
+    text-align: left;
+  }
+  .user_name > h6 {
+    font-size: 12px;
+  }
+  #formobile > h2 {
+    font-size: 24px;
+  }
+  #mobilebottomcontent {
+    width: 100%;
+    height: 45vh;
+  }
+  #mobilebottombox {
+    width: 80%;
+    height: 40vh;
+  }
+
+  /* #reviewformBox{
+              height: 40vh;
+          } */
+  #reviewformBox > h2 {
+    font-size: 20px;
+  }
+  #review_formbutton_collection {
+    display: block;
+    width: 55%;
+  }
+  /* HEADPHONE RESPONSIVE PART THE 2 BY 2 SECTION*/
+  #whyUs {
+    width: 100%;
+    height: 71vh;
+  }
+  #features {
+    display: contents;
+    /* display: block; */
+  }
+  .featureBox {
+    /* margin-bottom: 6px; */
+  }
+  /*RESPONSIVE PART FOR THE HOVER BOX PART*/ /*---------------------------------------------------------*/
+  .feature_section1 {
+    justify-content: space-evenly;
+    width: 62%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  .feature_section {
+    justify-content: space-evenly;
+    width: 62%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  /*SUPPORT CAUSE REPONSIVE CASE*/
+  .bottomButton {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .button2 {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .colouredbutton {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .button3 {
+    width: 210px;
+    height: 40px;
+  }
+  .name {
+    width: 50%;
+  }
+  #remainform {
+    width: 51%;
+  }
+
+  /*DEFAULT CSS FOR CANCEL THE HOVER*/
+  .reviewBox1 .icon {
+    color: green;
+  }
+  .reviewBox1 .textcontent > p {
+    opacity: 1;
+    font-size: 12px;
+  }
+  .reviewBox1 .textcontent {
+    height: 30%;
+    color: white;
+  }
+  #reviewbox:hover h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  #reviewbox h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  .reviewContent {
+    height: 87vh;
+  }
+  #reviewformBox {
+    height: 46vh;
+  }
+  /*LAST PART MEDIA QUERY*/
+  #textpart {
+    display: none;
+  }
+  .lastPart {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #iconpart {
+    width: 50%;
+    /* background-color: green; */
+  }
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 950px) {
+  .Navbar {
+    display: none;
+  }
+
+  .menuIcon {
+    display: initial;
+    padding-right: 15px;
+  }
+  .user_name {
+    padding-left: 7px;
+  }
+  #menu ul li a {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+  }
+  #menu {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    /* background-color:rgba(0, 0, 0, 0.868); */
+    /* background-color: red; */
+    background-color: #1a1a1a;
+    background-image: linear-gradient(
+      165deg,
+      #1a1a1a 0%,
+      #1e1c1a 30%,
+      #2c3a17 66%,
+      #136a16 100%
+    );
+    top: 0;
+    right: -200px;
+    z-index: 105;
+    transition: 1s;
+    text-align: left;
+  }
+  #menu .fa {
+    display: block;
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  #menu .closeicon {
+    text-align: left;
+  }
+  .buttoncolour {
+    display: none;
+  }
+  /*MENU SECTION END HERE*/
+
+  /* .txt_cont{
+                position: absolute;
+                background-color: red;
+            }
+
+            .txt_cont #text h1{
+                font-size: 17px;
+            } */
+  #soundWave {
+    width: 100%;
+    height: 55vh;
+  }
+  .minor > h6 {
+    display: none;
+  }
+  #text > h1 {
+    font-size: 30px;
+  }
+  #text>p{
+    font-size: 8px;
+  }
+  #text {
+    bottom: 15%;
+  }
+  .bottombox > h2 {
+    font-size: 17px;
+    padding-top: 20px;
+  }
+  /* .buttoncollection{ 
+                display:block;
+                width: 80%;
+                
+            } */
+
+  #mobilebuttoncollection {
+    width: 60%;
+    display: block;
+    justify-content: space-between;
+  }
+  /* .buttoncollection .button1{
+                width: 210px;
+                height: 40px;
+                font-size: 17px;
+                
+            } */
+  .heading {
+    font-size: 24px;
+  }
+  .button1 > span {
+    font-size: 14px;
+    font-family: myFirstFont;
+  }
+  .bottomContent {
+    /* height: 20vh; */
+  }
+
+  /*SECOND SECTION END HERE */
+  #mobile > .slider {
+    display: none;
+  }
+  .MobileSlider {
+    display: initial;
+  }
+  .inner_box1 {
+    /* height: 113vh; */
+    height: fit-content;
+    width: 39vw;
+  }
+
+  .descirption {
+    /* font-family: myFirstFont; */
+    margin-top: 0px;
+  }
+  .descirption > h6 {
+    font-size: 10px;
+  }
+  #contentDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .reviewContent {
+    height: 64vh;
+  }
+  .reviewBox1 {
+    width: 64%;
+    height: 100%;
+    margin-bottom: 3px;
+  }
+  .buttoncollection .button1 {
+    width: 100%;
+    height: 40px;
+  }
+  /* .heading{
+            padding-top: 2px;
+            
+           } */
+  /* .heading>h2{
+            font-size: 30px;
+           } */
+  .reviewBox1 > h4 {
+    font-size: 10px;
+  }
+  .reviewbutton {
+    display: none;
+  }
+  /*formContent second last part reposive at max-width 600px */
+  .formContent {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    height: 148vh;
+  }
+  .form-box {
+    height: 120vh;
+  }
+  #reviewform {
+    display: block;
+  }
+  /* #reviewformBox {
+            height: 38vh;
+           } */
+  #supportCouse {
+    width: 100%;
+  }
+  #bottom-form {
+    width: 100%;
+  }
+  .swiper-slide-prev .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper-slide-next .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper {
+    padding-top: 8px;
+  }
+  #user_review {
+    height: 53vh;
+  }
+  .inner_box {
+    height: 42vw;
+    width: 27vw;
+  }
+  .user_comment > h6 {
+    font-size: 16px;
+  }
+  .star {
+    width: 18px;
+    height: 18px;
+  }
+  .no-star {
+    width: 18px;
+    height: 18px;
+  }
+  .user_name > h4 {
+    font-size: 18px;
+    text-align: left;
+  }
+  .user_name > h6 {
+    font-size: 12px;
+  }
+  #formobile > h2 {
+    font-size: 24px;
+  }
+  #mobilebottomcontent {
+    width: 100%;
+    height: 45vh;
+  }
+  #mobilebottombox {
+    width: 80%;
+    height: 40vh;
+  }
+
+  /* #reviewformBox{
+              height: 40vh;
+          } */
+  #reviewformBox > h2 {
+    font-size: 20px;
+  }
+  #review_formbutton_collection {
+    display: block;
+    width: 70%;
+  }
+  /* HEADPHONE RESPONSIVE PART THE 2 BY 2 SECTION*/
+  #whyUs {
+    width: 100%;
+    height: 71vh;
+  }
+  #features {
+    display: contents;
+    /* display: block; */
+  }
+  .featureBox {
+    /* margin-bottom: 6px; */
+  }
+  /*RESPONSIVE PART FOR THE HOVER BOX PART*/ /*---------------------------------------------------------*/
+  .feature_section1 {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  .feature_section {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  /*SUPPORT CAUSE REPONSIVE CASE*/
+  .bottomButton {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .button2 {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .colouredbutton {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .button3 {
+    width: 210px;
+    height: 40px;
+  }
+  .name {
+    width: 60%;
+  }
+  #remainform {
+    width: 61%;
+  }
+
+  /*DEFAULT CSS FOR CANCEL THE HOVER*/
+  .reviewBox1 .icon {
+    color: green;
+  }
+  .reviewBox1 .textcontent > p {
+    opacity: 1;
+    font-size: 12px;
+  }
+  .reviewBox1 .textcontent {
+    height: 30%;
+    color: white;
+  }
+  #reviewbox:hover h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  #reviewbox h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  .reviewContent {
+    height: 87vh;
+  }
+  #reviewformBox {
+    height: 46vh;
+  }
+  /*LAST PART MEDIA QUERY*/
+  #textpart {
+    display: none;
+  }
+  .lastPart {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #iconpart {
+    width: 50%;
+    /* background-color: green; */
+  }
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 900px) {
+  .Navbar {
+    display: none;
+  }
+
+  .menuIcon {
+    display: initial;
+    padding-right: 15px;
+  }
+  .user_name {
+    padding-left: 7px;
+  }
+  #menu ul li a {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+  }
+  #menu {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    /* background-color:rgba(0, 0, 0, 0.868); */
+    /* background-color: red; */
+    background-color: #1a1a1a;
+    background-image: linear-gradient(
+      165deg,
+      #1a1a1a 0%,
+      #1e1c1a 30%,
+      #2c3a17 66%,
+      #136a16 100%
+    );
+    top: 0;
+    right: -200px;
+    z-index: 105;
+    transition: 1s;
+    text-align: left;
+  }
+  #menu .fa {
+    display: block;
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  #menu .closeicon {
+    text-align: left;
+  }
+  .buttoncolour {
+    display: none;
+  }
+  /*MENU SECTION END HERE*/
+
+  /* .txt_cont{
+                position: absolute;
+                background-color: red;
+            }
+
+            .txt_cont #text h1{
+                font-size: 17px;
+            } */
+  #soundWave {
+    width: 100%;
+    height: 55vh;
+  }
+  .minor > h6 {
+    display: none;
+  }
+  #text > h1 {
+    font-size: 30px;
+  }
+  #text {
+    bottom: 15%;
+  }
+  .bottombox > h2 {
+    font-size: 17px;
+    padding-top: 20px;
+  }
+  /* .buttoncollection{ 
+                display:block;
+                width: 80%;
+                
+            } */
+
+  #mobilebuttoncollection {
+    width: 60%;
+    display: block;
+    justify-content: space-between;
+  }
+  /* .buttoncollection .button1{
+                width: 210px;
+                height: 40px;
+                font-size: 17px;
+                
+            } */
+  .heading {
+    font-size: 24px;
+  }
+  .button1 > span {
+    font-size: 14px;
+    font-family: myFirstFont;
+  }
+  .bottomContent {
+    /* height: 20vh; */
+  }
+
+  /*SECOND SECTION END HERE */
+  #mobile > .slider {
+    display: none;
+  }
+  .MobileSlider {
+    display: initial;
+  }
+  .inner_box1 {
+    /* height: 113vh; */
+    height: fit-content;
+    width: 39vw;
+  }
+
+  .descirption {
+    /* font-family: myFirstFont; */
+    margin-top: 0px;
+  }
+  .descirption > h6 {
+    font-size: 10px;
+  }
+  #contentDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .reviewContent {
+    height: 64vh;
+  }
+  .reviewBox1 {
+    width: 64%;
+    height: 100%;
+    margin-bottom: 3px;
+  }
+  .buttoncollection .button1 {
+    width: 100%;
+    height: 40px;
+  }
+  /* .heading{
+            padding-top: 2px;
+            
+           } */
+  /* .heading>h2{
+            font-size: 30px;
+           } */
+  .reviewBox1 > h4 {
+    font-size: 10px;
+  }
+  .reviewbutton {
+    display: none;
+  }
+  /*formContent second last part reposive at max-width 600px */
+  .formContent {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    height: 148vh;
+  }
+  .form-box {
+    height: 120vh;
+  }
+  #reviewform {
+    display: block;
+  }
+  /* #reviewformBox {
+            height: 38vh;
+           } */
+  #supportCouse {
+    width: 100%;
+  }
+  #bottom-form {
+    width: 100%;
+  }
+  .swiper-slide-prev .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper-slide-next .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper {
+    padding-top: 8px;
+  }
+  #user_review {
+    height: 53vh;
+  }
+  .inner_box {
+    height: 42vw;
+    width: 27vw;
+  }
+  .user_comment > h6 {
+    font-size: 16px;
+  }
+  .star {
+    width: 18px;
+    height: 18px;
+  }
+  .no-star {
+    width: 18px;
+    height: 18px;
+  }
+  .user_name > h4 {
+    font-size: 18px;
+    text-align: left;
+  }
+  .user_name > h6 {
+    font-size: 12px;
+  }
+  #formobile > h2 {
+    font-size: 24px;
+  }
+  #mobilebottomcontent {
+    width: 100%;
+    height: 45vh;
+  }
+  #mobilebottombox {
+    width: 80%;
+    height: 40vh;
+  }
+
+  /* #reviewformBox{
+              height: 40vh;
+          } */
+  #reviewformBox > h2 {
+    font-size: 20px;
+  }
+  #review_formbutton_collection {
+    display: block;
+    width: 70%;
+  }
+  /* HEADPHONE RESPONSIVE PART THE 2 BY 2 SECTION*/
+  #whyUs {
+    width: 100%;
+    height: 71vh;
+  }
+  #features {
+    display: contents;
+    /* display: block; */
+  }
+  .featureBox {
+    /* margin-bottom: 6px; */
+  }
+  /*RESPONSIVE PART FOR THE HOVER BOX PART*/ /*---------------------------------------------------------*/
+  .feature_section1 {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  .feature_section {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  /*SUPPORT CAUSE REPONSIVE CASE*/
+  .bottomButton {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .button2 {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .colouredbutton {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .button3 {
+    width: 210px;
+    height: 40px;
+  }
+  .name {
+    width: 60%;
+  }
+  #remainform {
+    width: 61%;
+  }
+
+  /*DEFAULT CSS FOR CANCEL THE HOVER*/
+  .reviewBox1 .icon {
+    color: green;
+  }
+  .reviewBox1 .textcontent > p {
+    opacity: 1;
+    font-size: 12px;
+  }
+  .reviewBox1 .textcontent {
+    height: 30%;
+    color: white;
+  }
+  #reviewbox:hover h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  #reviewbox h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  .reviewContent {
+    height: 87vh;
+  }
+  #reviewformBox {
+    height: 46vh;
+  }
+  /*LAST PART MEDIA QUERY*/
+  #textpart {
+    display: none;
+  }
+  .lastPart {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #iconpart {
+    width: 50%;
+    /* background-color: green; */
+  }
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 850px) {
+  .Navbar {
+    display: none;
+  }
+
+  .menuIcon {
+    display: initial;
+    padding-right: 15px;
+  }
+  .user_name {
+    padding-left: 7px;
+  }
+  #menu ul li a {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+  }
+  #menu {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    /* background-color:rgba(0, 0, 0, 0.868); */
+    /* background-color: red; */
+    background-color: #1a1a1a;
+    background-image: linear-gradient(
+      165deg,
+      #1a1a1a 0%,
+      #1e1c1a 30%,
+      #2c3a17 66%,
+      #136a16 100%
+    );
+    top: 0;
+    right: -250px;
+    z-index: 105;
+    transition: 1s;
+    text-align: left;
+  }
+  #menu .fa {
+    display: block;
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  #menu .closeicon {
+    text-align: left;
+  }
+  .buttoncolour {
+    display: none;
+  }
+  /*MENU SECTION END HERE*/
+
+  /* .txt_cont{
+                    position: absolute;
+                    background-color: red;
+                }
+    
+                .txt_cont #text h1{
+                    font-size: 17px;
+                } */
+  #soundWave {
+    width: 100%;
+    height: 55vh;
+  }
+  .minor > h6 {
+    display: none;
+  }
+  #text > h1 {
+    font-size: 30px;
+  }
+  #text {
+    bottom: 15%;
+  }
+  .bottombox > h2 {
+    font-size: 17px;
+    padding-top: 20px;
+  }
+  /* .buttoncollection{ 
+                    display:block;
+                    width: 80%;
+                    
+                } */
+
+  #mobilebuttoncollection {
+    width: 70%;
+    display: block;
+    justify-content: space-between;
+  }
+  /* .buttoncollection .button1{
+                    width: 210px;
+                    height: 40px;
+                    font-size: 17px;
+                    
+                } */
+  .heading {
+    font-size: 24px;
+  }
+  .button1 > span {
+    font-size: 14px;
+    font-family: myFirstFont;
+  }
+  .bottomContent {
+    /* height: 20vh; */
+  }
+
+  /*SECOND SECTION END HERE */
+  #mobile > .slider {
+    display: none;
+  }
+  .MobileSlider {
+    display: initial;
+  }
+  .inner_box1 {
+    /* height: 113vh; */
+    height: fit-content;
+    width: 43vw;
+  }
+
+  .descirption {
+    /* font-family: myFirstFont; */
+    margin-top: 0px;
+  }
+  .descirption > h6 {
+    font-size: 10px;
+  }
+  #contentDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .reviewContent {
+    height: 64vh;
+  }
+  .reviewBox1 {
+    width: 64%;
+    height: 100%;
+    margin-bottom: 3px;
+  }
+  .buttoncollection .button1 {
+    width: 100%;
+    height: 40px;
+  }
+  /* .heading{
+                padding-top: 2px;
+                
+               } */
+  /* .heading>h2{
+                font-size: 30px;
+               } */
+  .reviewBox1 > h4 {
+    font-size: 10px;
+  }
+  .reviewbutton {
+    display: none;
+  }
+  /*formContent second last part reposive at max-width 600px */
+  .formContent {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    height: 148vh;
+  }
+  .form-box {
+    height: 120vh;
+  }
+  #reviewform {
+    display: block;
+  }
+  /* #reviewformBox {
+                height: 38vh;
+               } */
+  #supportCouse {
+    width: 100%;
+  }
+  #bottom-form {
+    width: 100%;
+  }
+  .swiper-slide-prev .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper-slide-next .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper {
+    padding-top: 8px;
+  }
+  #user_review {
+    height: 53vh;
+  }
+  .inner_box {
+    height: 42vw;
+    width: 27vw;
+  }
+  .user_comment > h6 {
+    font-size: 16px;
+  }
+  .star {
+    width: 18px;
+    height: 18px;
+  }
+  .no-star {
+    width: 18px;
+    height: 18px;
+  }
+  .user_name > h4 {
+    font-size: 18px;
+    text-align: left;
+  }
+  .user_name > h6 {
+    font-size: 12px;
+  }
+  #formobile > h2 {
+    font-size: 24px;
+  }
+  #mobilebottomcontent {
+    width: 100%;
+    height: 45vh;
+  }
+  #mobilebottombox {
+    width: 80%;
+    height: 40vh;
+  }
+
+  /* #reviewformBox{
+                  height: 40vh;
+              } */
+  #reviewformBox > h2 {
+    font-size: 20px;
+  }
+  #review_formbutton_collection {
+    display: block;
+    width: 100%;
+  }
+  /* HEADPHONE RESPONSIVE PART THE 2 BY 2 SECTION*/
+  #whyUs {
+    width: 100%;
+    height: 71vh;
+  }
+  #features {
+    display: contents;
+    /* display: block; */
+  }
+  .featureBox {
+    /* margin-bottom: 6px; */
+  }
+  /*RESPONSIVE PART FOR THE HOVER BOX PART*/ /*---------------------------------------------------------*/
+  .feature_section1 {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  .feature_section {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  /*SUPPORT CAUSE REPONSIVE CASE*/
+  .bottomButton {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .button2 {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .colouredbutton {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .button3 {
+    width: 210px;
+    height: 40px;
+  }
+  .name {
+    width: 60%;
+  }
+  #remainform {
+    width: 61%;
+  }
+
+  /*DEFAULT CSS FOR CANCEL THE HOVER*/
+  .reviewBox1 .icon {
+    color: green;
+  }
+  .reviewBox1 .textcontent > p {
+    opacity: 1;
+    font-size: 12px;
+  }
+  .reviewBox1 .textcontent {
+    height: 30%;
+    color: white;
+  }
+  #reviewbox:hover h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  #reviewbox h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  .reviewContent {
+    height: 87vh;
+  }
+  #reviewformBox {
+    height: 46vh;
+  }
+  /*LAST PART MEDIA QUERY*/
+  #textpart {
+    display: none;
+  }
+  .lastPart {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #iconpart {
+    width: 50%;
+    /* background-color: green; */
+  }
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 800px) {
+  .Navbar {
+    display: none;
+  }
+
+  .menuIcon {
+    display: initial;
+    padding-right: 15px;
+  }
+  .user_name {
+    padding-left: 7px;
+  }
+  #menu ul li a {
+    display: block;
+    text-align: left;
+  }
+  #menu {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    /* background-color:rgba(0, 0, 0, 0.868); */
+    /* background-color: red; */
+    background-color: #1a1a1a;
+    background-image: linear-gradient(
+      165deg,
+      #1a1a1a 0%,
+      #1e1c1a 30%,
+      #2c3a17 66%,
+      #136a16 100%
+    );
+    top: 0;
+    right: -200px;
+    z-index: 105;
+    transition: 1s;
+    text-align: left;
+  }
+  #menu .fa {
+    display: block;
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  #menu .closeicon {
+    text-align: left;
+  }
+  /*MENU SECTION END HERE*/
+
+  /* .txt_cont{
+                    position: absolute;
+                    background-color: red;
+                }
+    
+                .txt_cont #text h1{
+                    font-size: 17px;
+                } */
+  #soundWave {
+    width: 100%;
+    height: 55vh;
+  }
+  .minor > h6 {
+    display: none;
+  }
+  #text > h1 {
+    font-size: 30px;
+  }
+  #text {
+    bottom: 15%;
+  }
+  .bottombox > h2 {
+    font-size: 17px;
+    padding-top: 20px;
+  }
+  /* .buttoncollection{ 
+                    display:block;
+                    width: 80%;
+                    
+                } */
+
+  #mobilebuttoncollection {
+    width: 70%;
+    display: block;
+    justify-content: space-between;
+  }
+  /* .buttoncollection .button1{
+                    width: 210px;
+                    height: 40px;
+                    font-size: 17px;
+                    
+                } */
+  .heading {
+    font-size: 24px;
+  }
+  .button1 > span {
+    font-size: 14px;
+    font-family: myFirstFont;
+  }
+  .bottomContent {
+    /* height: 20vh; */
+  }
+
+  /*SECOND SECTION END HERE */
+  #mobile > .slider {
+    display: none;
+  }
+  .MobileSlider {
+    display: initial;
+  }
+  .inner_box1 {
+    /* height: 113vh; */
+    height: fit-content;
+    width: 43vw;
+  }
+
+  .descirption {
+    /* font-family: myFirstFont; */
+    margin-top: 0px;
+  }
+  .descirption > h6 {
+    font-size: 10px;
+  }
+  #contentDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .reviewContent {
+    height: 64vh;
+  }
+  .reviewBox1 {
+    width: 64%;
+    height: 100%;
+    margin-bottom: 3px;
+  }
+  .buttoncollection .button1 {
+    width: 100%;
+    height: 40px;
+  }
+  /* .heading{
+                padding-top: 2px;
+                
+               } */
+  /* .heading>h2{
+                font-size: 30px;
+               } */
+  .reviewBox1 > h4 {
+    font-size: 10px;
+  }
+  .reviewbutton {
+    display: none;
+  }
+  /*formContent second last part reposive at max-width 600px */
+  .formContent {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    height: 148vh;
+  }
+  .form-box {
+    height: 120vh;
+  }
+  #reviewform {
+    display: block;
+  }
+  #reviewformBox {
+    height: 48vh;
+  }
+  #supportCouse {
+    width: 100%;
+  }
+  #bottom-form {
+    width: 100%;
+  }
+  .swiper-slide-prev .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper-slide-next .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper {
+    padding-top: 8px;
+  }
+  #user_review {
+    height: 48vh;
+  }
+  .inner_box {
+    height: 42vw;
+    width: 27vw;
+  }
+  .user_comment > h6 {
+    font-size: 15px;
+  }
+  .star {
+    width: 18px;
+    height: 18px;
+  }
+  .no-star {
+    width: 18px;
+    height: 18px;
+  }
+  .user_name > h4 {
+    font-size: 18px;
+    text-align: left;
+  }
+  .user_name > h6 {
+    font-size: 12px;
+  }
+  #formobile > h2 {
+    font-size: 24px;
+  }
+  #mobilebottomcontent {
+    width: 100%;
+    height: 45vh;
+  }
+  #mobilebottombox {
+    width: 80%;
+    height: 40vh;
+  }
+
+  #reviewformBox > h2 {
+    font-size: 20px;
+  }
+  #review_formbutton_collection {
+    display: block;
+    width: 100%;
+  }
+  /* HEADPHONE RESPONSIVE PART THE 2 BY 2 SECTION*/
+  #whyUs {
+    width: 100%;
+    height: 71vh;
+  }
+  #features {
+    display: contents;
+    /* display: block; */
+  }
+  .featureBox {
+    /* margin-bottom: 6px; */
+  }
+  /*RESPONSIVE PART FOR THE HOVER BOX PART*/ /*---------------------------------------------------------*/
+  .feature_section1 {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  .feature_section {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  /*SUPPORT CAUSE REPONSIVE CASE*/
+  .bottomButton {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .button2 {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .colouredbutton {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .button3 {
+    width: 210px;
+    height: 40px;
+  }
+  .name {
+    width: 60%;
+  }
+  #remainform {
+    width: 61%;
+  }
+
+  /*DEFAULT CSS FOR CANCEL THE HOVER*/
+  .reviewBox1 .icon {
+    color: green;
+  }
+  .reviewBox1 .textcontent > p {
+    opacity: 1;
+    font-size: 12px;
+  }
+  .reviewBox1 .textcontent {
+    height: 30%;
+    color: white;
+  }
+  #reviewbox:hover h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  #reviewbox h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  .reviewContent {
+    height: 87vh;
+  }
+}
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 750px) {
+  .Navbar {
+    display: none;
+  }
+
+  .menuIcon {
+    display: initial;
+    padding-right: 15px;
+  }
+  .user_name {
+    padding-left: 7px;
+  }
+  #menu ul li a {
+    display: block;
+    text-align: left;
+  }
+  #menu {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    /* background-color:rgba(0, 0, 0, 0.868); */
+    /* background-color: red; */
+    background-color: #1a1a1a;
+    background-image: linear-gradient(
+      165deg,
+      #1a1a1a 0%,
+      #1e1c1a 30%,
+      #2c3a17 66%,
+      #136a16 100%
+    );
+    top: 0;
+    right: -200px;
+    z-index: 105;
+    transition: 1s;
+    text-align: left;
+  }
+  #menu .fa {
+    display: block;
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  #menu .closeicon {
+    text-align: left;
+  }
+  /*MENU SECTION END HERE*/
+
+  /* .txt_cont{
+                    position: absolute;
+                    background-color: red;
+                }
+    
+                .txt_cont #text h1{
+                    font-size: 17px;
+                } */
+  #soundWave {
+    width: 100%;
+    height: 55vh;
+  }
+  .minor > h6 {
+    display: none;
+  }
+  #text > h1 {
+    font-size: 30px;
+  }
+  #text {
+    bottom: 15%;
+  }
+  .bottombox > h2 {
+    font-size: 17px;
+    padding-top: 20px;
+  }
+  /* .buttoncollection{ 
+                    display:block;
+                    width: 80%;
+                    
+                } */
+
+  #mobilebuttoncollection {
+    width: 70%;
+    display: block;
+    justify-content: space-between;
+  }
+  /* .buttoncollection .button1{
+                    width: 210px;
+                    height: 40px;
+                    font-size: 17px;
+                    
+                } */
+  .heading {
+    font-size: 24px;
+  }
+  .button1 > span {
+    font-size: 14px;
+    font-family: myFirstFont;
+  }
+  .bottomContent {
+    /* height: 20vh; */
+  }
+
+  /*SECOND SECTION END HERE */
+  #mobile > .slider {
+    display: none;
+  }
+  .MobileSlider {
+    display: initial;
+  }
+  .inner_box1 {
+    /* height: 113vh; */
+    height: fit-content;
+    width: 50vw;
+  }
+
+  .descirption {
+    /* font-family: myFirstFont; */
+    margin-top: 0px;
+  }
+  .descirption > h6 {
+    font-size: 10px;
+  }
+  #contentDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .reviewContent {
+    height: 64vh;
+  }
+  .reviewBox1 {
+    width: 97%;
+    height: 100%;
+    margin-bottom: 3px;
+  }
+  .buttoncollection .button1 {
+    width: 100%;
+    height: 40px;
+  }
+  /* .heading{
+                padding-top: 2px;
+                
+               } */
+  /* .heading>h2{
+                font-size: 30px;
+               } */
+  .reviewBox1 > h4 {
+    font-size: 10px;
+  }
+  .reviewbutton {
+    display: none;
+  }
+  /*formContent second last part reposive at max-width 600px */
+  .formContent {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    height: 148vh;
+  }
+  .form-box {
+    height: 120vh;
+  }
+  #reviewform {
+    display: block;
+  }
+  #reviewformBox {
+    height: 48vh;
+  }
+  #supportCouse {
+    width: 100%;
+  }
+  #bottom-form {
+    width: 100%;
+  }
+  .swiper-slide-prev .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper-slide-next .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper {
+    padding-top: 8px;
+  }
+  #user_review {
+    height: 45vh;
+  }
+  .inner_box {
+    height: 42vw;
+    width: 27vw;
+  }
+  .user_comment > h6 {
+    font-size: 13px;
+  }
+  .star {
+    width: 15px;
+    height: 15px;
+  }
+  .no-star {
+    width: 15px;
+    height: 15px;
+  }
+  .user_name > h4 {
+    font-size: 14px;
+    text-align: left;
+  }
+  .user_name > h6 {
+    font-size: 10px;
+  }
+  #formobile > h2 {
+    font-size: 24px;
+  }
+  #mobilebottomcontent {
+    width: 100%;
+    height: 45vh;
+  }
+  #mobilebottombox {
+    width: 80%;
+    height: 40vh;
+  }
+
+  #reviewformBox {
+    /* height: 40vh; */
+  }
+  #reviewformBox > h2 {
+    font-size: 20px;
+  }
+  #review_formbutton_collection {
+    display: block;
+    width: 100%;
+  }
+  /* HEADPHONE RESPONSIVE PART THE 2 BY 2 SECTION*/
+  #whyUs {
+    width: 100%;
+    height: 71vh;
+  }
+  #features {
+    display: contents;
+    /* display: block; */
+  }
+  .featureBox {
+    /* margin-bottom: 6px; */
+  }
+  /*RESPONSIVE PART FOR THE HOVER BOX PART*/ /*---------------------------------------------------------*/
+  .feature_section1 {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  .feature_section {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  /*SUPPORT CAUSE REPONSIVE CASE*/
+  .bottomButton {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .button2 {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .colouredbutton {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .button3 {
+    width: 210px;
+    height: 40px;
+  }
+  .name {
+    width: 60%;
+  }
+  #remainform {
+    width: 61%;
+  }
+
+  /*DEFAULT CSS FOR CANCEL THE HOVER*/
+  .reviewBox1 .icon {
+    color: green;
+  }
+  .reviewBox1 .textcontent > p {
+    opacity: 1;
+    font-size: 12px;
+  }
+  .reviewBox1 .textcontent {
+    height: 30%;
+    color: white;
+  }
+  #reviewbox:hover h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  #reviewbox h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  .reviewContent {
+    height: 87vh;
+  }
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 700px) {
+  .Navbar {
+    display: none;
+  }
+
+  .menuIcon {
+    display: initial;
+    padding-right: 15px;
+  }
+  .user_name {
+    padding-left: 7px;
+  }
+  #menu ul li a {
+    display: block;
+    text-align: left;
+  }
+  #menu {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    /* background-color:rgba(0, 0, 0, 0.868); */
+    /* background-color: red; */
+    background-color: #1a1a1a;
+    background-image: linear-gradient(
+      165deg,
+      #1a1a1a 0%,
+      #1e1c1a 30%,
+      #2c3a17 66%,
+      #136a16 100%
+    );
+    top: 0;
+    right: -200px;
+    z-index: 105;
+    transition: 1s;
+    text-align: left;
+  }
+  #menu .fa {
+    display: block;
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  #menu .closeicon {
+    text-align: left;
+  }
+  /*MENU SECTION END HERE*/
+
+  /* .txt_cont{
+                    position: absolute;
+                    background-color: red;
+                }
+    
+                .txt_cont #text h1{
+                    font-size: 17px;
+                } */
+  #soundWave {
+    width: 100%;
+    height: 55vh;
+  }
+  .minor > h6 {
+    display: none;
+  }
+  #text > h1 {
+    font-size: 30px;
+  }
+  #text {
+    bottom: 15%;
+  }
+  .bottombox > h2 {
+    font-size: 17px;
+    padding-top: 20px;
+  }
+  /* .buttoncollection{ 
+                    display:block;
+                    width: 80%;
+                    
+                } */
+
+  #mobilebuttoncollection {
+    width: 70%;
+    display: block;
+    justify-content: space-between;
+  }
+  /* .buttoncollection .button1{
+                    width: 210px;
+                    height: 40px;
+                    font-size: 17px;
+                    
+                } */
+  .heading {
+    font-size: 24px;
+  }
+  .button1 > span {
+    font-size: 14px;
+    font-family: myFirstFont;
+  }
+  .bottomContent {
+    /* height: 20vh; */
+  }
+
+  /*SECOND SECTION END HERE */
+  #mobile > .slider {
+    display: none;
+  }
+  .MobileSlider {
+    display: initial;
+  }
+  .inner_box1 {
+    /* height: 113vh; */
+    height: fit-content;
+    width: 50vw;
+  }
+
+  .descirption {
+    /* font-family: myFirstFont; */
+    margin-top: 0px;
+  }
+  .descirption > h6 {
+    font-size: 10px;
+  }
+  #contentDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .reviewContent {
+    height: 64vh;
+  }
+  .reviewBox1 {
+    width: 97%;
+    height: 100%;
+    margin-bottom: 3px;
+  }
+  .buttoncollection .button1 {
+    width: 100%;
+    height: 40px;
+  }
+  /* .heading{
+                padding-top: 2px;
+                
+               } */
+  /* .heading>h2{
+                font-size: 30px;
+               } */
+  .reviewBox1 > h4 {
+    font-size: 10px;
+  }
+  .reviewbutton {
+    display: none;
+  }
+  /*formContent second last part reposive at max-width 600px */
+  .formContent {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    height: 148vh;
+  }
+  .form-box {
+    height: 120vh;
+  }
+  #reviewform {
+    display: block;
+  }
+  #reviewformBox {
+    height: 48vh;
+  }
+  #supportCouse {
+    width: 100%;
+  }
+  #bottom-form {
+    width: 100%;
+  }
+  .swiper-slide-prev .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper-slide-next .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper {
+    padding-top: 8px;
+  }
+  #user_review {
+    height: 39vh;
+  }
+  .inner_box {
+    height: 42vw;
+    width: 27vw;
+  }
+  .user_comment > h6 {
+    font-size: 10px;
+  }
+  .star {
+    width: 15px;
+    height: 15px;
+  }
+  .no-star {
+    width: 15px;
+    height: 15px;
+  }
+  .user_name > h4 {
+    font-size: 14px;
+    text-align: left;
+  }
+  .user_name > h6 {
+    font-size: small;
+  }
+  #formobile > h2 {
+    font-size: 24px;
+  }
+  #mobilebottomcontent {
+    width: 100%;
+    height: 45vh;
+  }
+  #mobilebottombox {
+    width: 80%;
+    height: 40vh;
+  }
+
+  #reviewformBox > h2 {
+    font-size: 20px;
+  }
+  #review_formbutton_collection {
+    display: block;
+    width: 100%;
+  }
+  /* HEADPHONE RESPONSIVE PART THE 2 BY 2 SECTION*/
+  #whyUs {
+    width: 100%;
+    height: 71vh;
+  }
+  #features {
+    display: contents;
+    /* display: block; */
+  }
+  .featureBox {
+    /* margin-bottom: 6px; */
+  }
+  /*RESPONSIVE PART FOR THE HOVER BOX PART*/ /*---------------------------------------------------------*/
+  .feature_section1 {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  .feature_section {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  /*SUPPORT CAUSE REPONSIVE CASE*/
+  .bottomButton {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .button2 {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .colouredbutton {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .button3 {
+    width: 210px;
+    height: 40px;
+  }
+  .name {
+    width: 60%;
+  }
+  #remainform {
+    width: 61%;
+  }
+
+  /*DEFAULT CSS FOR CANCEL THE HOVER*/
+  .reviewBox1 .icon {
+    color: green;
+  }
+  .reviewBox1 .textcontent > p {
+    opacity: 1;
+    font-size: 12px;
+  }
+  .reviewBox1 .textcontent {
+    height: 30%;
+    color: white;
+  }
+  #reviewbox:hover h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  #reviewbox h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  .reviewContent {
+    height: 87vh;
+  }
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 650px) {
+  .Navbar {
+    display: none;
+  }
+
+  .menuIcon {
+    display: initial;
+    padding-right: 15px;
+  }
+  .user_name {
+    padding-left: 7px;
+  }
+  #menu ul li a {
+    display: block;
+    text-align: left;
+  }
+  #menu {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    /* background-color:rgba(0, 0, 0, 0.868); */
+    /* background-color: red; */
+    background-color: #1a1a1a;
+    background-image: linear-gradient(
+      165deg,
+      #1a1a1a 0%,
+      #1e1c1a 30%,
+      #2c3a17 66%,
+      #136a16 100%
+    );
+    top: 0;
+    right: -200px;
+    z-index: 105;
+    transition: 1s;
+    text-align: left;
+  }
+  #menu .fa {
+    display: block;
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  #menu .closeicon {
+    text-align: left;
+  }
+  /*MENU SECTION END HERE*/
+
+  /* .txt_cont{
+                position: absolute;
+                background-color: red;
+            }
+
+            .txt_cont #text h1{
+                font-size: 17px;
+            } */
+  #soundWave {
+    width: 100%;
+    height: 55vh;
+  }
+  .minor > h6 {
+    display: none;
+  }
+  #text > h1 {
+    font-size: 30px;
+  }
+  #text {
+    bottom: 15%;
+  }
+  .bottombox > h2 {
+    font-size: 17px;
+    padding-top: 20px;
+  }
+  /* .buttoncollection{ 
+                display:block;
+                width: 80%;
+                
+            } */
+
+  #mobilebuttoncollection {
+    width: 70%;
+    display: block;
+    justify-content: space-between;
+  }
+  /* .buttoncollection .button1{
+                width: 210px;
+                height: 40px;
+                font-size: 17px;
+                
+            } */
+  .heading {
+    font-size: 24px;
+  }
+  .button1 > span {
+    font-size: 14px;
+    font-family: myFirstFont;
+  }
+  .bottomContent {
+    /* height: 20vh; */
+  }
+
+  /*SECOND SECTION END HERE */
+  #mobile > .slider {
+    display: none;
+  }
+  .MobileSlider {
+    display: initial;
+  }
+  .inner_box1 {
+    /* height: 113vh; */
+    height: fit-content;
+    width: 50vw;
+  }
+
+  .descirption {
+    /* font-family: myFirstFont; */
+    margin-top: 0px;
+  }
+  .descirption > h6 {
+    font-size: 10px;
+  }
+  #contentDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .reviewContent {
+    height: 64vh;
+  }
+  .reviewBox1 {
+    width: 97%;
+    height: 100%;
+    margin-bottom: 3px;
+  }
+  .buttoncollection .button1 {
+    width: 100%;
+    height: 40px;
+  }
+  /* .heading{
+            padding-top: 2px;
+            
+           } */
+  /* .heading>h2{
+            font-size: 30px;
+           } */
+  .reviewBox1 > h4 {
+    font-size: 10px;
+  }
+  .reviewbutton {
+    display: none;
+  }
+  /*formContent second last part reposive at max-width 600px */
+  .formContent {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    height: 148vh;
+  }
+  .form-box {
+    height: 120vh;
+  }
+  #reviewform {
+    display: block;
+  }
+  #reviewformBox {
+    height: 48vh;
+  }
+  #supportCouse {
+    width: 100%;
+    margin-bottom: 3px;
+  }
+  #bottom-form {
+    width: 100%;
+  }
+  .swiper-slide-prev .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper-slide-next .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper {
+    padding-top: 8px;
+  }
+  #user_review {
+    height: 39vh;
+  }
+  .inner_box {
+    height: 42vw;
+    width: 27vw;
+  }
+  .user_comment > h6 {
+    font-size: 10px;
+  }
+  .star {
+    width: 15px;
+    height: 15px;
+  }
+  .no-star {
+    width: 15px;
+    height: 15px;
+  }
+  .user_name > h4 {
+    font-size: 14px;
+    text-align: left;
+  }
+  .user_name > h6 {
+    font-size: small;
+  }
+  #formobile > h2 {
+    font-size: 24px;
+  }
+  #mobilebottomcontent {
+    width: 100%;
+    height: 45vh;
+  }
+  #mobilebottombox {
+    width: 80%;
+    height: 40vh;
+  }
+  #reviewformBox > h2 {
+    font-size: 20px;
+  }
+  #review_formbutton_collection {
+    display: block;
+    width: 100%;
+  }
+  /* HEADPHONE RESPONSIVE PART THE 2 BY 2 SECTION*/
+  #whyUs {
+    width: 100%;
+    height: 71vh;
+  }
+  #features {
+    display: contents;
+    /* display: block; */
+  }
+  .featureBox {
+    /* margin-bottom: 6px; */
+  }
+  /*RESPONSIVE PART FOR THE HOVER BOX PART*/ /*---------------------------------------------------------*/
+  .feature_section1 {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  .feature_section {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  /*SUPPORT CAUSE REPONSIVE CASE*/
+  .bottomButton {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .button2 {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .colouredbutton {
+    width: 210px;
+    height: 40px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .button3 {
+    width: 210px;
+    height: 40px;
+  }
+  .name {
+    width: 60%;
+  }
+  #remainform {
+    width: 61%;
+  }
+
+  /*DEFAULT CSS FOR CANCEL THE HOVER*/
+  .reviewBox1 .icon {
+    color: green;
+  }
+  .reviewBox1 .textcontent > p {
+    opacity: 1;
+    font-size: 12px;
+  }
+  .reviewBox1 .textcontent {
+    height: 30%;
+    color: white;
+  }
+  #reviewbox:hover h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  #reviewbox h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  .reviewContent {
+    height: 87vh;
+  }
+}
+@media (max-width: 600px) {
+  .menuIcon {
+    display: initial;
+    padding-right: 15px;
+  }
+  .user_name {
+    padding-left: 7px;
+  }
+  #menu ul li a {
+    display: block;
+    text-align: left;
+  }
+  #menu {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    /* background-color:rgba(0, 0, 0, 0.868); */
+    background-color: red;
+    top: 0;
+    right: -200px;
+    z-index: 105;
+    transition: 1s;
+    text-align: left;
+  }
+  #menu .fa {
+    display: block;
+    color: white;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  #menu .closeicon {
+    text-align: left;
+  }
+
+  /* .txt_cont{
+                position: absolute;
+                background-color: red;
+            }
+
+            .txt_cont #text h1{
+                font-size: 17px;
+            } */
+  #soundWave {
+    width: 100%;
+    height: 50vh;
+  }
+  .minor > h6 {
+    display: none;
+  }
+  #text > h1 {
+    font-size: 25px;
+  }
+  #text {
+    bottom: 15%;
+  }
+  .bottombox > h2 {
+    font-size: 17px;
+    padding-top: 20px;
+  }
+  /* .buttoncollection{ 
+                display:block;
+            } */
+  #mobilebuttoncollection {
+    width: 70%;
+  }
+  /* .buttoncollection .button1{
+                width: 160px;
+                height: 40px;
+                font-size: 17px;
+                
+            } */
+  .heading > h2 {
+    font-size: 14px;
+  }
+  .button1 > span {
+    font-size: 14px;
+    font-family: myFirstFont;
+  }
+  .bottomContent {
+    /* height: 20vh; */
+  }
+  #mobile > .slider {
+    display: none;
+  }
+  .MobileSlider {
+    display: initial;
+  }
+  .inner_box1 {
+    /* height: 113vh; */
+    height: fit-content;
+    width: 50vw;
+  }
+
+  .descirption {
+    /* font-family: myFirstFont; */
+    margin-top: 0px;
+  }
+  .descirption > h6 {
+    font-size: 10px;
+  }
+  #contentDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .reviewContent {
+    height: 64vh;
+  }
+  .reviewBox1 {
+    width: 97%;
+    height: 100%;
+    margin-bottom: 3px;
+  }
+  .buttoncollection .button1 {
+    width: 100%;
+    height: 40px;
+  }
+  .heading {
+    padding-top: 2px;
+  }
+  .heading > h2 {
+    font-size: 20px;
+  }
+  .reviewBox1 > h4 {
+    font-size: 10px;
+  }
+  .reviewbutton {
+    display: none;
+  }
+  /*formContent second last part reposive at max-width 600px */
+  .formContent {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    height: 148vh;
+  }
+  .form-box {
+    height: 120vh;
+  }
+  #reviewform {
+    display: block;
+  }
+  #reviewformBox {
+    height: 48vh;
+  }
+  #supportCouse {
+    width: 100%;
+  }
+  #bottom-form {
+    width: 100%;
+  }
+  .swiper-slide-prev .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper-slide-next .inner_box {
+    transform: rotate(0deg);
+  }
+  .swiper {
+    padding-top: 8px;
+  }
+  #user_review {
+    height: 39vh;
+  }
+  .inner_box {
+    height: 42vw;
+    width: 27vw;
+  }
+  .user_comment > h6 {
+    font-size: 10px;
+  }
+  .star {
+    width: 15px;
+    height: 15px;
+  }
+  .no-star {
+    width: 15px;
+    height: 15px;
+  }
+  .user_name > h4 {
+    font-size: 14px;
+    text-align: left;
+  }
+  .user_name > h6 {
+    font-size: small;
+  }
+  #formobile > h2 {
+    font-size: 18px;
+  }
+  #mobilebottomcontent {
+    width: 100%;
+    height: 45vh;
+  }
+  #mobilebottombox {
+    width: 80%;
+    height: 40vh;
+  }
+
+  #reviewformBox {
+    /* height: 40vh; */
+  }
+  #reviewformBox > h2 {
+    font-size: 20px;
+  }
+  /* #review_formbutton_collection{
+            display: block;
+            width: 100%;
+          } */
+  /* HEADPHONE RESPONSIVE PART THE 2 BY 2 SECTION*/
+  #whyUs {
+    width: 100%;
+    height: 71vh;
+  }
+  #features {
+    display: contents;
+    /* display: block; */
+  }
+  .featureBox {
+    /* margin-bottom: 6px; */
+  }
+  /*RESPONSIVE PART FOR THE HOVER BOX PART*/ /*---------------------------------------------------------*/
+  .feature_section1 {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  .feature_section {
+    justify-content: space-evenly;
+    width: 97%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+  /*SUPPORT CAUSE REPONSIVE CASE*/
+  .bottomButton {
+    width: 100%;
+  }
+  .button2 {
+    width: 210px;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+  .button3 {
+    max-width: 350px;
+    font-size: 20px;
+  }
+  .name {
+    width: 60%;
+  }
+  #remainform {
+    width: 61%;
+  }
+
+  /*DEFAULT CSS FOR CANCEL THE HOVER*/
+  .reviewBox1 .icon {
+    color: green;
+  }
+  .reviewBox1 .textcontent > p {
+    opacity: 1;
+    font-size: 12px;
+  }
+  .reviewBox1 .textcontent {
+    height: 30%;
+    color: white;
+  }
+  #reviewbox:hover h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  #reviewbox h4 {
+    font-size: 22px;
+    transition: all 0.5s;
+  }
+  .reviewContent {
+    height: 87vh;
+  }
+  .name {
+    width: 65%;
+  }
+  #remainform {
+    width: 64%;
+  }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 500px) {
+  .inner_box {
+    width: 40vw;
+    height: 54vw;
+  }
+  .user_comment > h6 {
+    max-width: fit-content;
+    font-size: 10px;
+  }
+  .swiper-slide-next .inner_box {
+    filter: blur(0.3);
+  }
+  .user_name > h6 {
+    font-size: 10px;
+    text-align: left;
+  }
+  .user_comment > h6 {
+    font-size: 11px;
+  }
+  .inner_box1 {
+    /* height: 82vh; */
+    height: fit-content;
+    width: 50vw;
+  }
+  #mobilebuttoncollection {
+    width: 91%;
+  }
+  #buttoncollection1 {
+    width: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  .inner_box {
+    width: 35vw;
+    height: 46vw;
+  }
+  .user_comment > h6 {
+    font-size: 10px;
+  }
+  .swiper-slide-next .inner_box {
+    filter: blur(0.3);
+  }
+  .user_name > h6 {
+    font-size: 10px;
+    text-align: left;
+  }
+  .user_comment > h6 {
+    font-size: 9px;
+  }
+  #mobilebuttoncollection {
+    padding-top: 30px;
+    width: 80%;
+  }
+  #formobile > h2 {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+  #review_formbutton_collection .button1 {
+    width: 100%;
+    display: block;
+  }
+  #buttoncollection1 {
+    width: 87%;
+  }
+
+  .button1 {
+    font-size: 12px;
+  }
+  .button1 img {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (max-width: 450px) {
+  .inner_box {
+    width: 37vw;
+    height: 54vw;
+  }
+  .user_comment > h6 {
+    font-size: 7px;
+  }
+  .swiper-slide-next .inner_box {
+    filter: blur(0.3);
+  }
+  .user_name > h6 {
+    font-size: 10px;
+    text-align: left;
+  }
+  .user_comment > h6 {
+    font-size: 10px;
+  }
+  #mobilebuttoncollection {
+    padding-top: 30px;
+    width: 95%;
+  }
+  #formobile > h2 {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+  #review_formbutton_collection .button1 {
+    width: 100%;
+    display: block;
+  }
+  #buttoncollection1 {
+    width: 95%;
+  }
+  .button1 {
+    font-size: 12px;
+  }
+  .button1 img {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (max-width: 400px) {
+  .inner_box {
+    width: 37vw;
+    height: 54vw;
+  }
+  .user_comment > h6 {
+    font-size: 7px;
+  }
+  .swiper-slide-next .inner_box {
+    filter: blur(0.3);
+  }
+  .user_name > h6 {
+    font-size: 10px;
+    text-align: left;
+  }
+  .user_comment > h6 {
+    font-size: 10px;
+  }
+  #mobilebuttoncollection {
+    padding-top: 30px;
+    width: 95%;
+  }
+  #formobile > h2 {
+    font-size: 18px;
+    padding-top: 20px;
+  }
+  #review_formbutton_collection .button1 {
+    width: 100%;
+    display: block;
+  }
+  #buttoncollection1 {
+    width: 95%;
+  }
+}
+@media (max-width: 393px) {
+  #buttoncollection1 {
+    width: 107%;
+  }
+  .button1 {
+    font-size: 12px;
+  }
+  .button1 img {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (max-width: 375px) {
+  .inner_box1 {
+    /* height: 77vh ; */
+    height: fit-content;
+    width: 56vw;
+  }
+  #mobilebuttoncollection {
+    padding-top: 30px;
+    width: 100%;
+  }
+  #formobile > h2 {
+    font-size: 17px;
+  }
+  .inner_box {
+    width: 44vw;
+    height: 61vw;
+  }
+  #buttoncollection1 {
+    width: 113%;
+  }
+  #heading2 > h2 {
+    font-size: 21px;
+  }
+  #supportCouse > h3 {
+    font-size: 20px;
+  }
+  #supportCouse > p {
+    font-size: 12px;
+  }
+  #user_review {
+    height: 29vh;
+  }
+  .button1 {
+    font-size: 12px;
+  }
+  .button1 img {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (max-width: 360px) {
+  .inner_box1 {
+    height: 66vh;
+    width: 56vw;
+  }
+  .descirption {
+    font-family: myFirstFont;
+  }
+  .inner_box {
+    width: 48vw;
+    height: 60vw;
+  }
+  #mobilebuttoncollection {
+    padding-top: 30px;
+    width: 110%;
+  }
+  .buttoncollection1 {
+    width: 140%;
+  }
+  .button2 {
+    width: 210px;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+  .bottombox {
+    justify-content: space-evenly;
+  }
+  /* .reviewBox1 .textcontent>p{
+        opacity: 1;
+        font-size: 8px;
+        } */
+  .reviewBox1 {
+    width: 122%;
+    height: 100%;
+    margin-bottom: 3px;
+  }
+  .button1 {
+    font-size: 12px;
+  }
+  .button1 img {
+    width: 24px;
+    height: 24px;
+  }
+}
+/*FOR ALL SMALL MOBILE--------------------360PX 320PX 375px 400px-  Break point Start--------------------------------------------------------*/
+@media (max-width: 320px) {
+  .inner_box1 {
+    height: 66vh;
+    width: 69vw;
+  }
+  .descirption {
+    margin-top: 69px;
+  }
+  #mobilebottombox {
+    width: 95%;
+    height: 36vh;
+  }
+  .reviewBox1 {
+    width: 131%;
+    height: 100%;
+    margin-bottom: 3px;
+  }
+  .inner_box {
+    width: 52vw;
+    height: 75vw;
+  }
+  .buttoncollection {
+    width: 75%;
+  }
+  .button2 {
+    width: 100px;
+  }
+  .supportCouse > h3 {
+    font-size: 20px;
+  }
+  .paragraph {
+    font-size: 12px;
+  }
+  #reviewformBox {
+    height: 47vh;
+  }
+  #mobilebuttoncollection {
+    padding-top: 30px;
+    width: 100%;
+  }
+  .button2 {
+    width: 207px;
+  }
+  .name {
+    width: 92%;
+  }
+  #remainform {
+    width: 93%;
+  }
+  #heading2 {
+    color: #989898;
+    font-family: myFont2;
+    /* margin-top: 20px; */
+    padding: 10px;
+    text-align: center;
+  }
+}
